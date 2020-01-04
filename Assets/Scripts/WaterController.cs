@@ -8,6 +8,9 @@ public class WaterController : MonoBehaviour
 
     public bool isMoving;
 
+    // Wave Type
+    public WaterTypesEnumeration waterType;
+
     // Wave height and speed
     public float scale = 0.1f;
     public float speed = 1.0f;
@@ -34,7 +37,14 @@ public class WaterController : MonoBehaviour
     // Get the Y Coordinate from whatever wavetype we are using
     public float GetWaveYPos(Vector3 position, float timeSinceStart)
     {
-        return 0f;
+        if (isMoving)
+        {
+            return WaveTypes.SinXWave(position, speed, scale, waveDistance, noiseStrength, noiseWalk, timeSinceStart, waterType);
+        }
+        else
+        {
+            return 0f;
+        }
     }
 
     // Find the distance from a vertice to the water
