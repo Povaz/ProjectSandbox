@@ -11,7 +11,7 @@ public class EndlessWaterSquare : MonoBehaviour
     // The object the water will follow
     public GameObject boatObj;
 
-    // Central water square
+    // One water square
     public GameObject waterSqrObj;
 
     // Water square data

@@ -31,13 +31,7 @@ public class WaterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Shader Variables
-        Shader.SetGlobalFloat("_WaterScale", scale);
-        Shader.SetGlobalFloat("_WaterSpeed", speed);
-        Shader.SetGlobalFloat("_WaterDistance", waveDistance);
-        Shader.SetGlobalFloat("_WaterTime", Time.time);
-        Shader.SetGlobalFloat("_WaterNoiseStrength", noiseStrength);
-        Shader.SetGlobalFloat("_WaterNoiseWalk", noiseWalk);
+        
     }
 
     // Get the Y Coordinate from whatever wavetype we are using
