@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6325704807109760778}
   - component: {fileID: 6325704807109760779}
   m_Layer: 0
-  m_Name: WaterSquare
+  m_Name: WaterSquarePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
