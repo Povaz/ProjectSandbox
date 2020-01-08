@@ -12,15 +12,15 @@ public class WaterController : MonoBehaviour
     public WaterTypesEnumeration waterType;
 
     // Wave height and speed
-    public float scale = 0.1f;
-    public float speed = 1.0f;
+    public float scale;
+    public float speed;
 
     // The width between the waves
-    public float waveDistance = 1f;
+    public float waveDistance;
 
     // Noise parameters
-    public float noiseStrength = 1f;
-    public float noiseWalk = 1f;
+    public float noiseStrength;
+    public float noiseWalk;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,13 @@ public class WaterController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Shader Variables
+        Shader.SetGlobalFloat("_WaterScale", scale);
+        Shader.SetGlobalFloat("_WaterSpeed", speed);
+        Shader.SetGlobalFloat("_WaterDistance", waveDistance);
+        Shader.SetGlobalFloat("_WaterTime", Time.time);
+        Shader.SetGlobalFloat("_WaterNoiseStrength", noiseStrength);
+        Shader.SetGlobalFloat("_WaterNoiseWalk", noiseWalk);
     }
 
     // Get the Y Coordinate from whatever wavetype we are using
